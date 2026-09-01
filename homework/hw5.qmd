@@ -1,0 +1,31 @@
+---
+title: "HW5: Spatial Joins & Publication-Quality Cartography"
+author: "YOUR NAME HERE"
+format:
+  html:
+    embed-resources: true
+---
+
+<!-- DRAFT — instructor to review/edit before distributing. Due Nov 5 (Week 10), worth 3%.
+     Covers advanced GIS, non-Census spatial data, publication cartography (Wk9). Instructor:
+     pick/confirm a non-Census point dataset (e.g. NBRC grantee locations, if available by then). -->
+
+## Instructions
+
+1. Bring in a non-Census spatial dataset (instructor to specify — e.g. point
+   locations) alongside a polygon layer (e.g. counties).
+2. Perform a spatial join (e.g. points-in-polygons) using `sf`.
+3. Produce a publication-quality map with `ggspatial`: include a scale bar
+   and north arrow at minimum; an inset map is optional/bonus.
+4. In a sentence or two, explain what the spatial join let you answer that
+   the two datasets couldn't answer separately.
+
+## Work
+
+```{r}
+# your code here
+```
+
+## Reflection
+
+*Write your response here.*

@@ -1,0 +1,30 @@
+---
+title: "HW4: Census Data & Choropleth Mapping"
+author: "YOUR NAME HERE"
+format:
+  html:
+    embed-resources: true
+---
+
+<!-- DRAFT — instructor to review/edit before distributing. Due Oct 29 (Week 9), worth 3%.
+     Covers Census geography, sf, tidycensus, basic choropleths (Wk8). Requires each student
+     to have set their own Census API key (see repo README). -->
+
+## Instructions
+
+1. Using `tidycensus`, pull an ACS variable (instructor to specify, or your
+   choice) for a geography of your choosing (county, tract, etc.) within the
+   NBRC four-state territory (ME, NH, NY, VT).
+2. Produce a choropleth map of that variable using `ggplot2` + `sf`.
+3. In a sentence or two, note one limitation of choropleth maps (e.g. area
+   bias) as it applies to your map.
+
+## Work
+
+```{r}
+# your code here
+```
+
+## Reflection
+
+*Write your response here.*

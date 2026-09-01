@@ -1,0 +1,33 @@
+---
+title: "HW3: Exploratory Analysis & Visualization"
+author: "YOUR NAME HERE"
+format:
+  html:
+    embed-resources: true
+---
+
+<!-- DRAFT — instructor to review/edit before distributing. Due Oct 22 (Week 8), worth 3%.
+     Largest-scope HW: covers EDA + ggplot2 basics (Wk4), advanced ggplot2/viz principles (Wk5),
+     and chart type selection (Wk7). Instructor: pick/confirm the dataset here. -->
+
+## Instructions
+
+1. Explore a dataset (instructor to specify) using summary statistics and at
+   least one exploratory plot.
+2. Build two polished ggplot2 charts using *different* chart types (e.g. a
+   bar chart and a scatter/line chart), each with proper titles, axis
+   labels, and a caption.
+3. For each chart, write a sentence explaining why you chose that chart type
+   for that particular comparison.
+4. In a short paragraph below, critique one of your own charts as if you
+   were a peer reviewer — what would you change?
+
+## Work
+
+```{r}
+# your code here
+```
+
+## Reflection
+
+*Write your response here.*

@@ -1,0 +1,32 @@
+---
+title: "HW1: Getting Started with R"
+author: "YOUR NAME HERE"
+format:
+  html:
+    embed-resources: true
+---
+
+<!-- DRAFT — instructor to review/edit before distributing. Due Sep 10 (Week 2), worth 3%. -->
+
+## Instructions
+
+This assignment is deliberately short — it's a check that your environment
+works and that you're comfortable with the basics of R covered in Week 1.
+
+1. In the code chunk below, create a vector of at least 5 numbers and assign
+   it to a variable.
+2. Compute its mean, minimum, and maximum.
+3. Create a second vector of at least 5 character strings (e.g. names).
+4. Combine both vectors into a single data frame (two columns).
+5. In a sentence or two below, describe one thing about R that surprised you
+   or felt different from other tools/languages you've used.
+
+## Work
+
+```{r}
+# your code here
+```
+
+## Reflection
+
+*Write your response here.*

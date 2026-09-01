@@ -1,0 +1,32 @@
+---
+title: "HW2: Wrangling Data"
+author: "YOUR NAME HERE"
+format:
+  html:
+    embed-resources: true
+---
+
+<!-- DRAFT — instructor to review/edit before distributing. Due Sep 24 (Week 4), worth 3%.
+     Covers dplyr/tidyverse (Wk2) and data import/APIs/joins (Wk3). Instructor: pick/confirm
+     the dataset(s) students should use here — a public dataset or API is assumed below. -->
+
+## Instructions
+
+1. Import a dataset (instructor to specify source, or an API pull covered in
+   Week 3).
+2. Using dplyr, produce at least three of: `filter()`, `select()`,
+   `mutate()`, `arrange()`, `summarize()` (with `group_by()`).
+3. Join this dataset to a second table (even a small hand-built one) using
+   one of the `*_join()` functions.
+4. In a sentence or two below, explain what your join added and why it was
+   useful.
+
+## Work
+
+```{r}
+# your code here
+```
+
+## Reflection
+
+*Write your response here.*
