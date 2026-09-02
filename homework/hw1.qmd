@@ -6,8 +6,6 @@ format:
     embed-resources: true
 ---
 
-<!-- DRAFT: instructor to review/edit before distributing. Due Sep 10 (Week 2), worth 3%. -->
-
 ## Instructions
 
 This assignment is deliberately short. It's a check that your environment
@@ -16,10 +14,13 @@ works and that you're comfortable with the basics of R covered in Week 1.
 1. In the code chunk below, create a vector of at least 5 numbers and assign
    it to a variable.
 2. Compute its mean, minimum, and maximum.
-3. Create a second vector of at least 5 character strings (e.g. names).
+3. Create a second vector of character strings (e.g. names) that is the same
+   length as your first vector.
 4. Combine both vectors into a single data frame (two columns).
 5. In a sentence or two below, describe one thing about R that surprised you
    or felt different from other tools/languages you've used.
+6. Click **Render** to confirm the document knits to HTML with no errors,
+   then save.
 
 ## Work
 
