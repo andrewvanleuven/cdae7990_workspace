@@ -6,7 +6,7 @@ format:
     embed-resources: true
 ---
 
-<!-- DRAFT — instructor to review/edit before distributing. Due Oct 29 (Week 9), worth 3%.
+<!-- DRAFT: instructor to review/edit before distributing. Due Oct 29 (Week 9), worth 3%.
      Covers Census geography, sf, tidycensus, basic choropleths (Wk8). Requires each student
      to have set their own Census API key (see repo README). -->
 

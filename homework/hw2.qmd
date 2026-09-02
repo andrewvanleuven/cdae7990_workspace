@@ -6,9 +6,9 @@ format:
     embed-resources: true
 ---
 
-<!-- DRAFT — instructor to review/edit before distributing. Due Sep 24 (Week 4), worth 3%.
-     Covers dplyr/tidyverse (Wk2) and data import/APIs/joins (Wk3). Instructor: pick/confirm
-     the dataset(s) students should use here — a public dataset or API is assumed below. -->
+<!-- DRAFT: instructor to review/edit before distributing. Due Sep 24 (Week 4), worth 3%.
+     Covers dplyr/tidyverse (Wk2) and data import/APIs/joins (Wk3). Instructor should
+     pick/confirm the dataset(s) students use here. A public dataset or API is assumed below. -->
 
 ## Instructions
 

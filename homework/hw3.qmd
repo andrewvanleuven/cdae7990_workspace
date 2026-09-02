@@ -6,7 +6,7 @@ format:
     embed-resources: true
 ---
 
-<!-- DRAFT — instructor to review/edit before distributing. Due Oct 22 (Week 8), worth 3%.
+<!-- DRAFT: instructor to review/edit before distributing. Due Oct 22 (Week 8), worth 3%.
      Largest-scope HW: covers EDA + ggplot2 basics (Wk4), advanced ggplot2/viz principles (Wk5),
      and chart type selection (Wk7). Instructor: pick/confirm the dataset here. -->
 
@@ -20,7 +20,7 @@ format:
 3. For each chart, write a sentence explaining why you chose that chart type
    for that particular comparison.
 4. In a short paragraph below, critique one of your own charts as if you
-   were a peer reviewer — what would you change?
+   were a peer reviewer. What would you change?
 
 ## Work
 

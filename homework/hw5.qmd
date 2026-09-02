@@ -6,13 +6,13 @@ format:
     embed-resources: true
 ---
 
-<!-- DRAFT — instructor to review/edit before distributing. Due Nov 5 (Week 10), worth 3%.
-     Covers advanced GIS, non-Census spatial data, publication cartography (Wk9). Instructor:
-     pick/confirm a non-Census point dataset (e.g. NBRC grantee locations, if available by then). -->
+<!-- DRAFT: instructor to review/edit before distributing. Due Nov 5 (Week 10), worth 3%.
+     Covers advanced GIS, non-Census spatial data, publication cartography (Wk9). Instructor
+     should pick/confirm a non-Census point dataset (e.g. NBRC grantee locations, if available). -->
 
 ## Instructions
 
-1. Bring in a non-Census spatial dataset (instructor to specify — e.g. point
+1. Bring in a non-Census spatial dataset (instructor to specify, e.g. point
    locations) alongside a polygon layer (e.g. counties).
 2. Perform a spatial join (e.g. points-in-polygons) using `sf`.
 3. Produce a publication-quality map with `ggspatial`: include a scale bar

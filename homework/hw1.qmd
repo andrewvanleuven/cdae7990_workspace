@@ -6,11 +6,11 @@ format:
     embed-resources: true
 ---
 
-<!-- DRAFT — instructor to review/edit before distributing. Due Sep 10 (Week 2), worth 3%. -->
+<!-- DRAFT: instructor to review/edit before distributing. Due Sep 10 (Week 2), worth 3%. -->
 
 ## Instructions
 
-This assignment is deliberately short — it's a check that your environment
+This assignment is deliberately short. It's a check that your environment
 works and that you're comfortable with the basics of R covered in Week 1.
 
 1. In the code chunk below, create a vector of at least 5 numbers and assign

@@ -2,7 +2,7 @@
 
 Starting-point R project for CDAE 7990 (Applied Data Science & Visualization),
 Fall 2026. This is the template used to seed each student's Posit Cloud
-workspace via a deployed Assignment — you shouldn't need to touch anything
+workspace via a deployed Assignment. You shouldn't need to touch anything
 here beyond running `setup.R` once.
 
 ## What's pre-installed
