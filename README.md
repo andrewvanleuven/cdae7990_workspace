@@ -28,14 +28,23 @@ tidycensus::census_api_key("YOUR_KEY_HERE", install = TRUE)
 
 ## Getting updates
 
-When new or revised homework files are posted, pull them into your copy of
-this project. In RStudio, open the **Terminal** tab (next to Console) and run:
+When a new homework is released, you'll be told which file to grab. In
+RStudio, open the **Terminal** tab (next to Console, *not* the Console
+itself) and run these two lines, swapping in the file name you were given:
 
 ```bash
-git pull
+git fetch
+git checkout origin/main -- homework/hw3.qmd
 ```
 
-You can also click the blue **Pull** arrow in the **Git** pane. Your own work
-(finished homework, uploaded data files) won't be touched unless you've
-edited a file that the update also changes. If `git pull` complains that
-your local changes "would be overwritten," ask before doing anything else.
+This replaces only the file you name. Everything else in your project
+(your other homework, uploaded data, anything you've created) is left alone.
+
+Two rules keep this safe:
+
+- **Don't start a homework file until it's been released.** The command
+  above overwrites the file you name, so anything already typed into it
+  would be lost.
+- **Don't use `git pull` or the Pull button in the Git pane.** They try to
+  update every file at once and will refuse to run once you've edited your
+  homework.
