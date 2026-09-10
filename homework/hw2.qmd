@@ -17,7 +17,7 @@ format:
     - Select any year. Find the `Download` button and download your data as a CSV file named `hw2a.csv`.
     - In the `homework` folder of this project, there is another folder called `data`. Navigate to that folder in the Files pane and click the `Upload` button. Upload your newly downloaded CSV file to Posit Cloud. **You are now ready to do the homework!**
 
-2.  Import your data as a data frame using the "starter" code chunk below. BEA data is a bit unwieldy, so I've already done some of the tidying for you. Don't worry if you see a warning or two when it runs. The file includes a U.S. total, state totals, and some footnotes at the bottom, and those rows don't split neatly into a county and a state.
+2.  Import your data as a data frame using the "starter" code chunk below. BEA data is a bit unwieldy, so I've already done some of the tidying for you. Don't worry if you see a warning or two when it runs. BEA puts footnotes at the bottom of the file and marks missing values as `(NA)`, and R complains about both before the code removes them.
 
 3.  Using dplyr, write code that uses *at least three* of `filter()`, `select()`, `mutate()`, `arrange()`, and/or `summarize()`. These can be separate steps or chained together with `|>`, whatever you prefer. Save your results to a new object (e.g. `df_vt`) rather than overwriting `df`, because you'll need the original `df` again in step 5. You may want to:
 
@@ -25,11 +25,15 @@ format:
     - Keep only a few important columns: `select()`
     - Create a new column that describes population in thousands (dividing raw population by 1,000): `mutate()`
     - Sort in descending order of population: `arrange()`
-    - Sum all county populations by state, ending up with just one row for each state, using a combo of `group_by()` and `summarize()` (hint: the U.S. and state total rows have `NA` in the `state` column)
+    - Sum all county populations by state, ending up with just one row for each state, using a combo of `group_by()` and `summarize()`
 
-4.  Go back to the BEA website and repeat the process for downloading county-level data. Do everything the same (including the year), except **select a *different* statistic other than population**, and name your file `hw2b.csv`. Upload it into Posit Cloud and import it as `df2` by repurposing the starter code chunk (you will need to change the file name, the object name, and `population` to whatever your new variable is).
+4.  Go back to the BEA website and repeat the process for downloading county-level data. Do everything the same, except **select either a different statistic (other than population) or a different year**, and name your file `hw2b.csv`. Upload it into Posit Cloud and import it as `df2` by repurposing the starter code chunk (you will need to change the file name, the object name, and `population_2024` to whatever your new variable is).
 
-5.  Join `df2` to `df` using one of the `*_join()` functions, matching on `county_fips`. Both data frames also have `county_name` and `state` columns, so you'll get duplicates (`.x` and `.y`) unless you either `select()` just `county_fips` and your new variable from `df2` before joining, or join on all three columns. **Optional**: use your newly joined dataset to create a completely new variable. If you downloaded something like "Personal income," you could divide it by population to get "Per-capita income" (check the units first, since BEA reports personal income in thousands of dollars).
+5.  Join `df2` to `df` using one of the `*_join()` functions, matching on `county_fips`. Both data frames also have `county_name` and `state` columns, so you'll get duplicates (`.x` and `.y`) unless you either `select()` just `county_fips` and your new variable from `df2` before joining, or join on all three columns.
+
+    ::: {.callout-tip title="Optional"}
+    Use your newly joined dataset to create a completely new variable. If you downloaded something like "Personal income," you could divide it by population to get "Per-capita income" (check the units first, since BEA reports personal income in thousands of dollars). Or if you downloaded a different year of population data, you could calculate the percent change in population between your two years.
+    :::
 
 6.  In a sentence or two below, explain what your join added and why it was useful.
 
@@ -42,10 +46,12 @@ format:
 df <- read_csv('data/hw2a.csv', skip = 3) |>
   rename(
     county_fips = 1,
-    population = 3
+    population_2024 = 3
   ) |>
-  separate(GeoName, into = c('county_name', 'state'), sep = ', ') |>
-  mutate(population = as.numeric(population))
+  mutate(population_2024 = as.numeric(population_2024)) |>
+  filter(population_2024 > 0) |> # gets rid of empty/missing cells
+  mutate(GeoName = str_remove(GeoName, '\\*')) |> # removes BEA's footnote asterisks
+  separate_wider_regex(GeoName, c(county_name = '.*', ', ', state = '[A-Z]{2}')) # splits at the LAST comma
 
 # your code here
 ```
