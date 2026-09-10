@@ -31,9 +31,7 @@ format:
 
 5.  Join `df2` to `df` using one of the `*_join()` functions, matching on `county_fips`. Both data frames also have `county_name` and `state` columns, so you'll get duplicates (`.x` and `.y`) unless you either `select()` just `county_fips` and your new variable from `df2` before joining, or join on all three columns.
 
-    ::: {.callout-tip title="Optional"}
-    Use your newly joined dataset to create a completely new variable. If you downloaded something like "Personal income," you could divide it by population to get "Per-capita income" (check the units first, since BEA reports personal income in thousands of dollars). Or if you downloaded a different year of population data, you could calculate the percent change in population between your two years.
-    :::
+- **OPTIONAL**: Use your newly joined dataset to create a completely new variable. If you downloaded something like "Personal income," you could divide it by population to get "Per-capita income" (check the units first, since BEA reports personal income in thousands of dollars). Or if you downloaded a different year of population data, you could calculate the change in population between your two years.
 
 6.  In a sentence or two below, explain what your join added and why it was useful.
 
