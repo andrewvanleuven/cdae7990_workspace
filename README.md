@@ -25,3 +25,17 @@ set it once per session:
 ```r
 tidycensus::census_api_key("YOUR_KEY_HERE", install = TRUE)
 ```
+
+## Getting updates
+
+When new or revised homework files are posted, pull them into your copy of
+this project. In RStudio, open the **Terminal** tab (next to Console) and run:
+
+```bash
+git pull
+```
+
+You can also click the blue **Pull** arrow in the **Git** pane. Your own work
+(finished homework, uploaded data files) won't be touched unless you've
+edited a file that the update also changes. If `git pull` complains that
+your local changes "would be overwritten," ask before doing anything else.
