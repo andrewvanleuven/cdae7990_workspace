@@ -1,33 +1,82 @@
 ---
-title: "HW3: Exploratory Analysis & Visualization"
+title: "HW3: Telling a Story with Data"
 author: "YOUR NAME HERE"
 format:
   html:
     embed-resources: true
 ---
 
-<!-- DRAFT: instructor to review/edit before distributing. Due Oct 22 (Week 8), worth 3%.
-     Largest-scope HW: covers EDA + ggplot2 basics (Wk4), advanced ggplot2/viz principles (Wk5),
-     and chart type selection (Wk7). Instructor: pick/confirm the dataset here. -->
+```{r}
+#| message: false
+library(tidyverse)
+```
 
 ## Instructions
 
-1. Explore a dataset (instructor to specify) using summary statistics and at
-   least one exploratory plot.
-2. Build two polished ggplot2 charts using *different* chart types (e.g. a
-   bar chart and a scatter/line chart), each with proper titles, axis
-   labels, and a caption.
-3. For each chart, write a sentence explaining why you chose that chart type
-   for that particular comparison.
-4. In a short paragraph below, critique one of your own charts as if you
-   were a peer reviewer. What would you change?
+This assignment practices two things from Weeks 7 and 8: picking the right figure for a question, and using Quarto to turn your code into a short report someone else could read. It's meant to be short: one question, two figures, and one paragraph.
 
-## Work
+1.  **Add a PDF format.** Put your name in `author` at the top of this file. Then add one line, `typst: default`, so the `format:` section looks exactly like this (spacing matters, so `typst` lines up with `html`):
+
+    ``` yaml
+    format:
+      html:
+        embed-resources: true
+      typst: default
+    ```
+
+2.  **Pick a dataset.** Choose one of these. They're all already installed, so there's nothing to download.
+
+    - `midwest`: demographics of 437 Midwest counties in 2000 (you've seen it in Weeks 2, 4, and 7)
+    - `txhousing`: monthly home sales and prices for 46 Texas cities, 2000 to 2015
+    - `economics`: monthly US economic data (unemployment, savings, population), 1967 to 2015
+    - `mpg`: fuel economy for 234 car models
+    - **Optional**: data you're already using for your NBRC project
+
+3.  **Ask one question** about your data, and say which kind of question it is, using the table from Week 7: comparison, distribution, change over time, relationship, or composition. Write both under **Your Question** below.
+
+4.  **Explore.** In the **Exploration** chunk, run `glimpse()` on your dataset and make one quick figure to get a feel for the answer. It doesn't need to look good. Default settings are fine.
+
+5.  **Polish.** In the **Figure** chunk, make one figure that answers your question for a reader like NBRC staff. Give it a title that states the finding, plain-language axis labels (with units), and sorted categories if your figure has them. That chunk already has three options set for you: `echo: false` hides the code in the rendered report, `label` gives the figure a name, and `fig-cap` is its caption. Replace the caption text with your own, and name your data source in it.
+
+6.  **Write it up.** Under **Findings**, write 3 to 5 sentences that:
+
+    - start with your bottom line, in **bold**
+    - refer to your figure by typing `@fig-hw3` (Quarto turns this into "Figure 1")
+    - include at least one number calculated with inline R code (see the example below)
+    - explain in one sentence why you chose that type of figure
+
+    **Inline code example**: the `midwest` dataset has `r nrow(midwest)` counties. Look at that sentence here in the `.qmd` file, then look at it in your rendered HTML. Inline code is a backtick, the letter `r`, a space, any R code, and a closing backtick.
+
+7.  **Render.** Use the **Render** button as you work to check the HTML. When you're finished, open the **Terminal** tab (next to Console) and run this line, which renders *both* formats at once:
+
+    ``` bash
+    quarto render homework/hw3.qmd
+    ```
+
+    You should see `hw3.html` and `hw3.pdf` appear in your `homework` folder. If the PDF won't render, don't stress. Make sure the HTML renders, and tell me what error you saw.
+
+## Your Question
+
+*Question:*
+
+*Type of question:*
+
+## Exploration
 
 ```{r}
-# your code here
+# glimpse() your dataset, then make one quick exploratory figure
+
 ```
 
-## Reflection
+## Figure
 
-*Write your response here.*
+```{r}
+#| label: fig-hw3
+#| fig-cap: "Your caption here. Source: your dataset."
+#| echo: false
+
+```
+
+## Findings
+
+*Write your 3 to 5 sentences here.*
