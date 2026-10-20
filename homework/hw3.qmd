@@ -22,9 +22,9 @@ Build the "Rural Poverty in the Midwest" report in this file, step by step, as t
 By the end of Part 1, everything above this note should match the "Follow Along: The Whole File" slide (with your name as the author), with the format section from the "Several Formats at Once" slide:
 
 format:
-  html:
-    embed-resources: true
+  html: default
   typst: default
+embed-resources: true
 
 PART 2: On your own. Just two things.
 
