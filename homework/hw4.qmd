@@ -1,30 +1,51 @@
 ---
-title: "HW4: Census Data & Choropleth Mapping"
+title: "HW4: Maps"
 author: "YOUR NAME HERE"
-format:
-  html:
-    embed-resources: true
+format: html
+embed-resources: true
+execute:
+  message: false
+  warning: false
 ---
 
-<!-- DRAFT: instructor to review/edit before distributing. Due Oct 29 (Week 9), worth 3%.
-     Covers Census geography, sf, tidycensus, basic choropleths (Wk8). Requires each student
-     to have set their own Census API key (see repo README). -->
-
-## Instructions
-
-1. Using `tidycensus`, pull an ACS variable (instructor to specify, or your
-   choice) for a geography of your choosing (county, tract, etc.) within the
-   NBRC four-state territory (ME, NH, NY, VT).
-2. Produce a choropleth map of that variable using `ggplot2` + `sf`.
-3. In a sentence or two, note one limitation of choropleth maps (e.g. area
-   bias) as it applies to your map.
-
-## Work
+<!--
+START HERE. This file is yours, and it's fine to replace everything in it.
+Full instructions: https://andrewvanleuven.github.io/uvm_datasci/homework/hw4.html
+Due Sunday, Nov. 15, 11:59pm. Pick ONE NBRC state (ME, NH, NY, or VT) for both parts.
+-->
 
 ```{r}
-# your code here
+library(tidyverse)
+library(sf)
+library(tigris)
+library(tidycensus)
+library(ggspatial)
+options(tigris_use_cache = TRUE)
 ```
 
-## Reflection
+## Part 1: A Choropleth of Census Data
 
-*Write your response here.*
+<!--
+- One ACS variable that fits your team's domain, pulled with get_acs(..., geometry = TRUE)
+- Map a share, rate, or median, not a raw count
+- Readable palette, theme_void(), a title that states the finding, a source caption
+- A scale bar: annotation_scale()
+- Then two or three sentences, with at least one specific number
+-->
+
+```{r}
+
+```
+
+## Part 2: Colleges as Points
+
+<!--
+- Install educationdata from GitHub IN THE CONSOLE, once (see the instructions)
+- Pull your state's colleges with get_education_data(), then st_as_sf()
+- Map the points over your state's counties (or your Part 1 map), with a title and a source caption
+- Then two or three sentences: where are the colleges, and where are the gaps?
+-->
+
+```{r}
+
+```
