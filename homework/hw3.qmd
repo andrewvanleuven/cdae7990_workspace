@@ -8,5 +8,5 @@ embed-resources: true
 <!--
 START HERE. This file is yours, and it's fine to replace everything in it.
 Build it along with the Week 8 video and slides.
-Instructions: open HW3_INSTRUCTIONS_READ_ONLY.html (in this folder) and choose "View in Web Browser".
+Instructions: https://andrewvanleuven.github.io/uvm_datasci/homework/hw3.html
 -->
