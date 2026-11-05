@@ -1,31 +1,51 @@
 ---
-title: "HW5: Spatial Joins & Publication-Quality Cartography"
+title: "HW5: Maps"
 author: "YOUR NAME HERE"
-format:
-  html:
-    embed-resources: true
+format: html
+embed-resources: true
+execute:
+  message: false
+  warning: false
 ---
 
-<!-- DRAFT: instructor to review/edit before distributing. Due Nov 5 (Week 10), worth 3%.
-     Covers advanced GIS, non-Census spatial data, publication cartography (Wk9). Instructor
-     should pick/confirm a non-Census point dataset (e.g. NBRC grantee locations, if available). -->
-
-## Instructions
-
-1. Bring in a non-Census spatial dataset (instructor to specify, e.g. point
-   locations) alongside a polygon layer (e.g. counties).
-2. Perform a spatial join (e.g. points-in-polygons) using `sf`.
-3. Produce a publication-quality map with `ggspatial`: include a scale bar
-   and north arrow at minimum; an inset map is optional/bonus.
-4. In a sentence or two, explain what the spatial join let you answer that
-   the two datasets couldn't answer separately.
-
-## Work
+<!--
+START HERE. This file is yours, and it's fine to replace everything in it.
+Full instructions: open HW5_INSTRUCTIONS_READ_ONLY.html (in this folder) and choose "View in Web Browser".
+Due Sunday, Nov. 15, 11:59pm. Pick ONE NBRC state (ME, NH, NY, or VT) for both parts.
+-->
 
 ```{r}
-# your code here
+library(tidyverse)
+library(sf)
+library(tigris)
+library(tidycensus)
+library(ggspatial)
+options(tigris_use_cache = TRUE)
 ```
 
-## Reflection
+## Part 1: A Choropleth of Census Data
 
-*Write your response here.*
+<!--
+- One ACS variable that fits your team's domain, pulled with get_acs(..., geometry = TRUE)
+- Map a share, rate, or median, not a raw count
+- Readable palette, theme_void(), a title that states the finding, a source caption
+- A scale bar: annotation_scale()
+- Then two or three sentences, with at least one specific number
+-->
+
+```{r}
+
+```
+
+## Part 2: Colleges as Points
+
+<!--
+- Install educationdata from GitHub IN THE CONSOLE, once (see the instructions)
+- Pull your state's colleges with get_education_data(), then st_as_sf()
+- Map the points over your state's counties (or your Part 1 map), with a title and a source caption
+- Then two or three sentences: where are the colleges, and where are the gaps?
+-->
+
+```{r}
+
+```
